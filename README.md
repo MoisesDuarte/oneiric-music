@@ -1,5 +1,10 @@
 # OneiricMusic
-MEVN (MongoDB, Node, Nuxt.Js) Music Manager
+MEVN Stack Music Manager and Player
+
+## Technologies
+- **Frontend:** NuxtJS
+- **Backend:** NodeJs + Express
+- **Database:** MongoDb
 
 # Server Side
 ## Setup
