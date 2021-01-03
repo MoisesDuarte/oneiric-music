@@ -1,5 +1,5 @@
 # OneiricMusic
-MEVN Stack Music Manager
+MEVN (MongoDB, Node, Nuxt.Js) Music Manager
 
 # Server Side
 ## Setup
