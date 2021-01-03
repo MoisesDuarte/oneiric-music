@@ -2,7 +2,7 @@
 MEVN Stack Music Manager and Player
 
 ## Description
-Music manager for listing and playing audio files in the browser
+A very simple music manager for listing and playing audio files in the browser, for studying purposes.
 
 ## Technologies
 - **Frontend:** NuxtJS
