@@ -1,12 +1,16 @@
 <template>
   <div>
-    Hello World!
+    <Player />
   </div>
 </template>
 
 <script>
+import Player from '@/components/player/Player';
+
 export default {
-  
+  components: {
+    Player,
+  },
 }
 </script>
 

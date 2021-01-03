@@ -44,7 +44,18 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    // ? Configuring file loader to accept audio files
+    extend(config, context) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|mp4|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '\[path\][name].[ext]'
+        },
+      });
+    }
+  },
 
   // Server Configuration
   server: {

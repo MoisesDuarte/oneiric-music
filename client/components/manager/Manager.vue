@@ -1,37 +1,39 @@
 <template>
   <b-container class="mt-4">
     <!-- Add Music Form -->
-    <b-card v-if="addState" title="Add Music">
-      <b-card-text>
-        <b-form @submit.prevent="addNewMusic">
-          <b-form-group label="Title">
-            <b-form-input 
-              v-model="musicDetails.title" 
-              required
-            />
-          </b-form-group>
-          <b-form-group label="Artist">
-            <b-form-input 
-              v-model="musicDetails.artist" 
-              required
-            />
-          </b-form-group>
-          <b-form-group label="Music">
-            <b-form-file 
-              v-model="musicDetails.music" 
-              accept="audio/wav, audio/mp3" 
-              required
-            />
-          </b-form-group>
-          <b-button variant="danger" @click="clearForm">
-            Clear
-          </b-button>
-          <b-button variant="primary" type="submit">
-            Submit
-          </b-button>
-        </b-form>
-      </b-card-text>
-    </b-card>
+    <transition name="fade">
+      <b-card v-if="addState" title="Add Music">
+        <b-card-text>
+          <b-form @submit.prevent="addNewMusic">
+            <b-form-group label="Title">
+              <b-form-input 
+                v-model="musicDetails.title" 
+                required
+              />
+            </b-form-group>
+            <b-form-group label="Artist">
+              <b-form-input 
+                v-model="musicDetails.artist" 
+                required
+              />
+            </b-form-group>
+            <b-form-group label="Music">
+              <b-form-file 
+                v-model="musicDetails.music" 
+                accept="audio/wav, audio/mp3" 
+                required
+              />
+            </b-form-group>
+            <b-button variant="danger" @click="clearForm">
+              Clear
+            </b-button>
+            <b-button variant="primary" type="submit">
+              Submit
+            </b-button>
+          </b-form>
+        </b-card-text>
+      </b-card>
+    </transition>
 
     <!-- Music Listing -->
     <b-card class="my-4">
@@ -122,6 +124,7 @@ export default {
           })
           .catch(err => {
             swal('Error', 'Something went wrong', 'error')
+            console.info(err);
           });
         }
       });
@@ -138,6 +141,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>

@@ -1,19 +1,15 @@
 <template>
   <b-navbar>
-    <b-navbar-brand href="#">
-      OneiricMusic
-    </b-navbar-brand>
+    <nuxt-link to="/" class="navbar-brand">
+      Oneiric<b>Music</b>
+    </nuxt-link>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item>
-          Player
-        </b-nav-item>
-        <b-nav-item>
-          Manager
-        </b-nav-item>
+        <nuxt-link to="/" class="nav-link">Player</nuxt-link>
+        <nuxt-link to="/manager" class="nav-link">Manager</nuxt-link>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
