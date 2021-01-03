@@ -1,6 +1,9 @@
 # OneiricMusic
 MEVN Stack Music Manager and Player
 
+## Description
+Music manager for listing and playing audio files in the browser
+
 ## Technologies
 - **Frontend:** NuxtJS
 - **Backend:** NodeJs + Express
