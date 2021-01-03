@@ -30,9 +30,13 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 
 // ? Routing
+const musicRoutes = require("./api/routes/music");
+
 app.get("/", (req, res) => {
   res.json('API is online...');
 });
+
+app.use("/music", musicRoutes);
 
 // ? Static folders
 app.use("/uploads", express.static("uploads"));
