@@ -4,8 +4,8 @@ MEVN (MongoDB, Node, Nuxt.Js) Music Manager
 # Server Side
 ## Setup
 - Change database string and secret in **server/config/db** to your local database 
-- npm install
-- npm start
+- $ npm install
+- $ npm start
 
 ## Routes
 | Description      | Route          | Method | Body                                              |
@@ -13,3 +13,7 @@ MEVN (MongoDB, Node, Nuxt.Js) Music Manager
 | Fetch All Musics | /music         | GET    |                                                   |
 | Add New Music    | /music         | POST   | "title": String, "artist": String,  "music": File |
 | Delete Music     | /music:musicId | DELETE |                                                   |
+
+# Client Side
+- $ npm install
+- $ npm run dev
