@@ -34,6 +34,9 @@ app.get("/", (req, res) => {
   res.json('API is online...');
 });
 
+// ? Static folders
+app.use("/uploads", express.static("uploads"));
+
 // ? Server Listening
 const PORT = process.env.port || 3000;
 app.listen(PORT, () => {
